@@ -41,37 +41,38 @@ Vue.use(Router)
   all roles can be accessed
 */
 export const constantRoutes: RouteConfig[] = [
-  {
-    path: '/redirect',
-    component: Layout,
-    meta: { hidden: true },
-    children: [
-      {
-        path: '/redirect/:path(.*)',
-        component: () => import(/* webpackChunkName: "redirect" */ '@/views/redirect/index.vue')
-      }
-    ]
-  },
+  // {
+  //   path: '/redirect',
+  //   component: Layout,
+  //   meta: { hidden: true },
+  //   children: [
+  //     {
+  //       path: '/redirect/:path(.*)',
+  //       component: () => import(/* webpackChunkName: "redirect" */ '@/views/redirect/index.vue')
+  //     }
+  //   ]
+  // },
   {
     path: '/login',
-    component: () => import(/* webpackChunkName: "login" */ '@/views/login/index.vue'),
-    meta: { hidden: true }
+    // component: () => import(/* webpackChunkName: "login" */ '@/views/login/index.vue'),
+    redirect: '/',
+    // meta: { hidden: true }
   },
-  {
-    path: '/auth-redirect',
-    component: () => import(/* webpackChunkName: "auth-redirect" */ '@/views/login/auth-redirect.vue'),
-    meta: { hidden: true }
-  },
-  {
-    path: '/404',
-    component: () => import(/* webpackChunkName: "404" */ '@/views/error-page/404.vue'),
-    meta: { hidden: true }
-  },
-  {
-    path: '/401',
-    component: () => import(/* webpackChunkName: "401" */ '@/views/error-page/401.vue'),
-    meta: { hidden: true }
-  },
+  // {
+  //   path: '/auth-redirect',
+  //   component: () => import(/* webpackChunkName: "auth-redirect" */ '@/views/login/auth-redirect.vue'),
+  //   meta: { hidden: true }
+  // },
+  // {
+  //   path: '/404',
+  //   component: () => import(/* webpackChunkName: "404" */ '@/views/error-page/404.vue'),
+  //   meta: { hidden: true }
+  // },
+  // {
+  //   path: '/401',
+  //   component: () => import(/* webpackChunkName: "401" */ '@/views/error-page/401.vue'),
+  //   meta: { hidden: true }
+  // },
   {
     path: '/',
     component: () => import('@/views/109/analyzation.vue')
