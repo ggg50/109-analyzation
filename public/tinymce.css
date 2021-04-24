@@ -1,0 +1,18 @@
+/* 富文本框的样式 */
+
+span.editor-template {
+  border-style: none;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  padding: 0 10px;
+  margin: 0 10px;
+  text-align: center;
+  align-self: center;
+  font-size: 18px;
+  min-width: 150px;
+  height: 1em;
+}
+
+p {
+  cursor: pointer;
+}
